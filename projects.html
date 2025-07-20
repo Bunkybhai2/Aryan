@@ -1,105 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>💼 Projects - Bunky</title>
+  <title>Bunky's Projects</title>
   <style>
     body {
       margin: 0;
       padding: 0;
+      background: linear-gradient(to right, #141e30, #243b55);
       font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
       color: white;
-    }
-
-    nav {
-      background-color: #1f1f1f;
-      padding: 15px;
       text-align: center;
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
     }
 
-    nav a {
-      color: cyan;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #ffcc00;
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .container {
-      max-width: 90%;
-      margin: 30px auto;
+      max-width: 900px;
+      margin: 40px auto;
       padding: 20px;
-      background-color: rgba(255,255,255,0.05);
-      border-radius: 12px;
-      text-align: center;
     }
 
     h1 {
-      color: #ffcc00;
+      color: #00ffff;
+      font-size: 36px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .project {
-      background-color: rgba(255,255,255,0.08);
+      background-color: rgba(255, 255, 255, 0.05);
       padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,255,255,0.1);
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      max-width: 600px;
     }
 
-    a.button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 15px;
-      background-color: cyan;
-      color: black;
-      border-radius: 6px;
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    }
+
+    .project h2 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 16px;
+      color: #ddd;
+    }
+
+    a {
+      color: cyan;
       text-decoration: none;
       font-weight: bold;
     }
 
-    footer {
+    a:hover {
+      color: #ffcc00;
+    }
+
+    .btn-back {
       margin-top: 30px;
-      text-align: center;
-      color: #aaa;
+      display: inline-block;
+      background-color: cyan;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background-color: #ffcc00;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">👤 About</a>
-    <a href="projects.html">💼 Projects</a>
-    <a href="contact.html">📞 Contact</a>
-  </nav>
-
   <div class="container">
-    <h1>💼 My Projects</h1>
+    <h1>💼 My Cool Projects</h1>
 
     <div class="project">
-      <h2>🎨 Portfolio Website</h2>
-      <p>Mera khud ka stylish personal website (tum ye dekh hi rahe ho 😄)</p>
-      <a href="index.html" class="button">🔗 Visit</a>
+      <h2>🌐 Personal Portfolio Website</h2>
+      <p>HTML + CSS se banaya gaya mera pehla professional portfolio website.</p>
+      <a href="index.html">Live Demo 🔗</a>
     </div>
 
     <div class="project">
-      <h2>📱 YouTube Channel</h2>
-      <p>Main tech, gaming ya vlog YouTube videos banata hoon. Subscribe zarur karna!</p>
-      <a href="https://youtube.com/@bunky4j56" class="button" target="_blank">🎥 Visit Channel</a>
+      <h2>🎮 Mini JavaScript Game (Coming Soon)</h2>
+      <p>Ek simple fun game bana raha hoon jo JS se chalega (launching soon!)</p>
     </div>
 
     <div class="project">
-      <h2>💡 Coming Soon: Calculator App</h2>
-      <p>Ek simple HTML+JS calculator banane wala hoon. Jaldi live karein!</p>
+      <h2>📸 SayCheese Clone (Testing)</h2>
+      <p>Termux aur camera hack ka test clone — only for education!</p>
     </div>
+
+    <a class="btn-back" href="index.html">🔙 Back to Home</a>
   </div>
-
-  <footer>
-    © 2025 | Bunky ka Projects Page | Built with 💖
-  </footer>
 
 </body>
 </html>
