@@ -2,7 +2,13 @@
 <html>
 <head>
   <title>Welcome | Bunky</title>
+
+  <!-- Responsive Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -66,7 +72,7 @@
     }
 
     img {
-      width: 80%;
+      width: 90%;
       max-width: 400px;
       border-radius: 15px;
       margin-top: 20px;
@@ -86,10 +92,38 @@
       margin-top: 20px;
     }
 
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      color: white;
+      margin: 0 10px;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: cyan;
+      transform: scale(1.2);
+    }
+
     footer {
       margin-top: 30px;
       font-size: 14px;
       color: #ccc;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+      .container {
+        padding: 20px;
+      }
+      ol {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
@@ -108,6 +142,12 @@
     <a href="projects.html">💼 Projects</a>
     <a href="contact.html">📞 Contact</a>
     <a href="https://youtube.com/@bunky4j56" target="_blank">▶️ YouTube</a>
+
+    <div class="social-icons">
+      <a href="https://youtube.com/@bunky4j56" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/aryan_oza07?igsh=N2U4ZXM1cmppZWow" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/bunkybhai2" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
 
     <h2>🐶 Favourite Cute Dog</h2>
     <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=800&q=80" alt="Dog">
